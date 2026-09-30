@@ -66,13 +66,15 @@ TBLPROPERTIES (
 Use AWS Glue crawler to automatically create table schemas
 <img width="1893" height="813" alt="image" src="https://github.com/user-attachments/assets/9b84dde5-3a55-45aa-87db-1e2766c4fffc" />
 <img width="1918" height="813" alt="image" src="https://github.com/user-attachments/assets/e251815b-9a5b-432b-8943-c8b07d04a010" />
-```cmd
+
+```
 DESCRIBE customers
 ```
 <img width="1897" height="820" alt="image" src="https://github.com/user-attachments/assets/59c155f1-d490-4f08-a7d5-35e21ef127ce" />
 <img width="1893" height="775" alt="image" src="https://github.com/user-attachments/assets/efa01038-88f9-4ced-b1ad-88f52bc1ac0a" />
 Task 5: Perform basic aggregations and filtering
 <img width="1896" height="808" alt="image" src="https://github.com/user-attachments/assets/d8e6ae6a-7399-4262-ba50-77123c0e0148" />
+
 ```
 SELECT 
     c.country,
@@ -84,9 +86,11 @@ JOIN sales s ON c.customer_id = s.customer_id
 GROUP BY c.country
 ORDER BY total_sales DESC;
 ```
+
 <img width="1890" height="807" alt="image" src="https://github.com/user-attachments/assets/0c082a1f-b1d3-4e0f-9288-5ef66f2bae00" />
 Join multiple tables
-```cmd
+
+```
 SELECT 
     c.country,
     c.firstname,
@@ -100,6 +104,7 @@ ORDER BY cast(s.price as decimal(10,2)) DESC
 LIMIT 10;
 ```
 <img width="1894" height="817" alt="image" src="https://github.com/user-attachments/assets/8c2861d9-9606-459c-8628-8ed5477d2fae" />
+
 ```
 SELECT 
     c.firstname,
@@ -116,7 +121,8 @@ LIMIT 10;
 ```
 <img width="1894" height="819" alt="image" src="https://github.com/user-attachments/assets/0879f8a9-3ec4-4b54-8e66-e1b07f1a373c" />
 Task 6: Explore query editor Features
-```cmd
+
+```
 EXPLAIN
 SELECT 
     c.country,
@@ -127,9 +133,11 @@ JOIN sales s ON c.customer_id = s.customer_id
 GROUP BY c.country
 ORDER BY total_sales DESC;
 ```
+
 <img width="1903" height="810" alt="image" src="https://github.com/user-attachments/assets/cdb18c92-ee21-44d5-a51b-00cacbcb927d" />
 Review logical plan explanation
-```cmd
+
+```
 SELECT 
     c.firstname,
     c.lastname,
@@ -142,6 +150,7 @@ GROUP BY c.firstname, c.lastname, c.country
 HAVING COUNT(*) > 1
 ORDER BY total_spent DESC;
 ```
+
 <img width="1896" height="814" alt="image" src="https://github.com/user-attachments/assets/bef2ff61-bb9a-49e1-a21f-39d2ae60428a" />
 Save queries for future use
 <img width="1815" height="741" alt="image" src="https://github.com/user-attachments/assets/3bb1a87f-3c3a-4732-b4ef-d168b078744c" />
