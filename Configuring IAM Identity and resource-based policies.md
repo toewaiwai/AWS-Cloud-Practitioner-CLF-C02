@@ -21,5 +21,6 @@ Verified that the EC2 instance was allowed to:
 Verified that `s3:PutObject` permissions were restricted to specific files in the designated **Data** and **Backup** S3 buckets
 <img width="762" height="558" alt="image" src="https://github.com/user-attachments/assets/96c7b636-ec75-46d5-b5c4-fe51a1cbff92" />
 <img width="472" height="715" alt="image" src="https://github.com/user-attachments/assets/baed1d7d-7f01-4e91-b55d-a7379839c833" />
+
 Validate and test permissions granted to the EC2 instance
 <img width="1918" height="481" alt="image" src="https://github.com/user-attachments/assets/6cd45ef9-6400-4c15-8a8d-ebce08489345" />
