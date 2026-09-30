@@ -3,7 +3,7 @@
 1. Create Subnet group
 <img width="1918" height="616" alt="image" src="https://github.com/user-attachments/assets/1630a345-d199-4d15-b6c6-69834dd1b13d" />
 2. Create a DocumentDB cluster
-   
+
 3. Create an additional replica instance on the mydocdb cluster (For redudancy and performance)
 <img width="1893" height="792" alt="image" src="https://github.com/user-attachments/assets/b41452e8-7ca5-48b1-96f3-869a0b3228c6" />
 4. Adjust the VPC security group containing the EC2 instance to allow port 27017 traffic
