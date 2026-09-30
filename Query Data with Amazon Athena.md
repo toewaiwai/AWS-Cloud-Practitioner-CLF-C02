@@ -1,4 +1,5 @@
 <img width="449" height="201" alt="image" src="https://github.com/user-attachments/assets/706b9313-5f83-4e86-9e17-e6560426219f" />
+
 Task 1: Set up and configure Amazon Athena
 <img width="1617" height="670" alt="image" src="https://github.com/user-attachments/assets/322b7d94-f699-42cf-93b0-28c61f6a145e" />
 Task 2: Upload sales data to S3
@@ -11,4 +12,32 @@ Task 3: Create and configure an AWS Glue crawler
 <img width="1918" height="726" alt="image" src="https://github.com/user-attachments/assets/d1d28a36-e67b-418c-81e4-64f7a1b1b6ab" />
 Task 4: Create database tables using Athena and Glue Crawler
 <img width="1915" height="808" alt="image" src="https://github.com/user-attachments/assets/fec543fe-179c-4180-b15d-6adc210b2c22" />
+```cmd
+CREATE EXTERNAL TABLE customers (
+    card_id bigint,
+    customer_id bigint,
+    lastname string,
+    firstname string,
+    email string,
+    address string,
+    birthday string,
+    country string
+)
+ROW FORMAT SERDE 
+  'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+WITH SERDEPROPERTIES (
+  'field.delim'=',',
+  'serialization.format'=','
+)
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://data-bucket-642804619/customers/'
+TBLPROPERTIES (
+  'has_encrypted_data'='false',
+  'skip.header.line.count'='1'
+);
+```
 
