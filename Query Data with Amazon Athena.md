@@ -12,7 +12,8 @@ Task 3: Create and configure an AWS Glue crawler
 <img width="1918" height="726" alt="image" src="https://github.com/user-attachments/assets/d1d28a36-e67b-418c-81e4-64f7a1b1b6ab" />
 Task 4: Create database tables using Athena and Glue Crawler
 <img width="1915" height="808" alt="image" src="https://github.com/user-attachments/assets/fec543fe-179c-4180-b15d-6adc210b2c22" />
-```cmd
+
+```
 CREATE EXTERNAL TABLE customers (
     card_id bigint,
     customer_id bigint,
@@ -42,7 +43,8 @@ TBLPROPERTIES (
 ```
 <img width="1896" height="784" alt="image" src="https://github.com/user-attachments/assets/70d8fcb6-4a02-416e-9947-4ab2f0d4cbcd" />
 <img width="1915" height="822" alt="image" src="https://github.com/user-attachments/assets/6e2200e1-87ef-4942-96e0-57c5e3fbc8d3" />
-```cmd
+
+```
 CREATE EXTERNAL TABLE sales (
     card_id bigint,
     customer_id bigint,
@@ -58,6 +60,7 @@ TBLPROPERTIES (
     'skip.header.line.count'='1'
 );
 ```
+
 <img width="1915" height="820" alt="image" src="https://github.com/user-attachments/assets/60c75411-9862-4549-a93e-d1c40028b2ce" />
 <img width="1912" height="823" alt="image" src="https://github.com/user-attachments/assets/53110303-0974-425b-b019-86b3e2df341d" />
 Use AWS Glue crawler to automatically create table schemas
@@ -70,7 +73,7 @@ DESCRIBE customers
 <img width="1893" height="775" alt="image" src="https://github.com/user-attachments/assets/efa01038-88f9-4ced-b1ad-88f52bc1ac0a" />
 Task 5: Perform basic aggregations and filtering
 <img width="1896" height="808" alt="image" src="https://github.com/user-attachments/assets/d8e6ae6a-7399-4262-ba50-77123c0e0148" />
-```cmd
+```
 SELECT 
     c.country,
     COUNT(DISTINCT c.customer_id) as total_customers,
@@ -97,7 +100,7 @@ ORDER BY cast(s.price as decimal(10,2)) DESC
 LIMIT 10;
 ```
 <img width="1894" height="817" alt="image" src="https://github.com/user-attachments/assets/8c2861d9-9606-459c-8628-8ed5477d2fae" />
-```cmd
+```
 SELECT 
     c.firstname,
     c.lastname,
