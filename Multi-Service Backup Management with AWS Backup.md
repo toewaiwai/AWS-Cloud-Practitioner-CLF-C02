@@ -159,3 +159,6 @@ Choose Jobs from the left navigation pane to monitor backup job execution.
 Verify that backup jobs are listed for your tagged resources, confirming that the backup plan is executing successfully.
 
 <img width="941" height="279" alt="image" src="https://github.com/user-attachments/assets/160d87a4-a7bc-470d-aea4-ece93641b472" />
+
+Complete Architecture
+<img width="270" height="360" alt="image" src="https://github.com/user-attachments/assets/a369b8ad-e9f1-4841-8814-b4ee0f0fda35" />
